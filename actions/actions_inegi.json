@@ -1,0 +1,86 @@
+{
+    "url": "https://www.inegi.org.mx",
+    "actions": [
+        {
+            "action": "click",
+            "selector": {
+                "by": "xpath",
+                "value": "//a[text()='Temas']"
+            }
+        },
+        {
+            "action": "click",
+            "selector": {
+                "by": "xpath",
+                "value": "//*[@id='teLista']/div[3]/ul/li[4]/div/a"
+            }
+        },
+        {
+            "action": "click",
+            "selector": {
+                "by": "xpath",
+                "value": "//*[@id='teLista']/div[3]/ul/li[4]/ul/li[1]/div/a"
+            }
+        },
+        {
+            "action": "click",
+            "selector": {
+                "by": "id",
+                "value": "publicaciones"
+            }
+        },
+        {
+            "action": "wait",
+            "selector": {
+                "by": "seconds",
+                "value": 2
+            }
+        },
+        {
+            "action": "send_keys",
+            "selector": {
+                "by": "xpath",
+                "value": "//*[@id='bcp_main_id_cmpListaProductos']/form/div/div[1]/div/input"
+            },
+            "value": "Coahuila"
+        },
+        {
+            "action": "click",
+            "selector": {
+                "by": "id",
+                "value": "bcp_buscar_btn_cmpListaProductos"
+            }
+        },
+        {
+            "action": "wait",
+            "selector": {
+                "by": "seconds",
+                "value": 2
+            }
+        },
+        {
+            "action": "extract",
+            "selector": {
+                "by": "xpath",
+                "value": "//*[@id='bcp_lista_resultados_cmpListaProductos']/tbody/tr"
+            },
+            "description": "INEGI",
+            "extract": [
+                {
+                    "field": "title",
+                    "selector": {
+                        "by": "xpath",
+                        "value": "/html/body/div[2]/main/div/div/div/div/pestanas-gen/div[2]/div[3]/div/div/div[2]/div/table/tbody/tr[1]/td[2]/a"
+                    }
+                },
+                {
+                    "field": "edition",
+                    "selector": {
+                        "by": "xpath",
+                        "value": "//*[@id='bcp_lista_resultados_cmpListaProductos']/tbody/tr[1]/td[3]"
+                    }
+                }
+            ]
+        }
+    ]
+}

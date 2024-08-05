@@ -1,0 +1,129 @@
+{
+    "url": "https://uttorreon.mx",
+    "actions": [
+        {
+            "action": "send_keys",
+            "selector": {
+                "by": "id",
+                "value": "email"
+            },
+            "value": "21170084"
+        },
+        {
+            "action": "send_keys",
+            "selector": {
+                "by": "id",
+                "value": "password"
+            },
+            "value": "4789108_Hfrdz"
+        },
+        {
+            "action": "click",
+            "selector": {
+                "by": "xpath",
+                "value": "/html/body/div/div[1]/div[1]/form/div[4]/div/div/button"
+            }
+        },
+        {
+            "action": "wait",
+            "selector": {
+                "by": "seconds",
+                "value": 5
+            }
+        },
+        {
+            "action": "click",
+            "selector": {
+                "by": "xpath",
+                "value": "//*[@id='mCSB_1_container']/ul/li[5]/a"
+            }
+        },
+        {
+            "action": "click",
+            "selector": {
+                "by": "xpath",
+                "value": "//*[@id='mCSB_1_container']/ul/li[5]/ul/li[1]/a"
+            }
+        },
+        {
+            "action": "click",
+            "selector": {
+                "by": "xpath",
+                "value": "//*[@id='mCSB_1_container']/ul/li[5]/ul/li[1]/ul/li/a"
+            }
+        },
+        {
+            "action": "click",
+            "selector": {
+                "by": "id",
+                "value": "OConsultarCalificaciones"
+            }
+        },
+        {
+            "action": "wait",
+            "selector": {
+                "by": "seconds",
+                "value": 5
+            }
+        },
+        {
+            "action": "click",
+            "selector": {
+                "by": "xpath",
+                "value": "//*[@id='TabConsultarCalificaciones']/div/div/div/div[2]/div/div[1]/div[2]/div[4]/div[1]/span[2]/span/button"
+            }
+        },
+        {
+            "action": "click",
+            "selector": {
+                "by": "xpath",
+                "value": "//ul[@class='dropdown-menu']/li/a[text()='100']"
+            }
+        },
+        {
+            "action": "wait",
+            "selector": {
+                "by": "seconds",
+                "value": 3
+            }
+        },
+        {
+            "action": "extract",
+            "selector": {
+                "by": "xpath",
+                "value": "//*[@id='TablaHistorico']/tbody/tr"
+            },
+            "description": "SIAUTT",
+            "extract": [
+                {
+                    "field": "Periodo",
+                    "selector": {
+                        "by": "xpath",
+                        "value": "td[1]"
+                    }
+                },
+                {
+                    "field": "Profesor",
+                    "selector": {
+                        "by": "xpath",
+                        "value": "td[2]"
+                    }
+                },
+                {
+                    "field": "Materia",
+                    "selector": {
+                        "by": "xpath",
+                        "value": "td[3]"
+                    }
+                },
+                {
+                    "field": "Calificacion",
+                    "selector": {
+                        "by": "xpath",
+                        "value": "td[5]"
+                    }
+                }
+            ]
+        }
+    ]
+}
